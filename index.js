@@ -39,7 +39,7 @@ app.use('/bookingservice', async (req, res, next) => {
 })
 app.use('/bookingservice', createProxyMiddleware({ target: 'http://localhost:3002/', changeOrigin: true }));
 app.get('/home', (req, res) => {
-    return res.json({ message: OK });
+    return res.json({ message: 'OK' });
 })
 
 app.listen(PORT, () => {
